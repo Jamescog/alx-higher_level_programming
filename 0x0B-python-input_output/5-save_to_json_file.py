@@ -6,7 +6,7 @@ in JSON represantation
 """
 
 
-def def save_to_json_file(my_obj, filename):
+def save_to_json_file(my_obj, filename):
     """
     This function writes an Object to a txt file
     using JSON represantation
