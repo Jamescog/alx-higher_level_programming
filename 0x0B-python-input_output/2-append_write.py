@@ -13,5 +13,5 @@ def append_write(filename="", text=""):
     """
     num = len(text)
     with open(filename, 'a', encoding="utf-8") as wf:
-         wf.write(text)
+        wf.write(text)
     return num
