@@ -1,51 +1,49 @@
-'''
-# Import the required function
->>> from importlib import import_module
->>> add_integer = import_module('0-add_integer').add_integer
+The ``0-add_integer`` module
+=====================================
 
-# Valid arguments
->>> add_integer(3, 4)
-7
+
+Using ``add_integer``
+--------------------------------------
+Importing the function from module
+>>> add_integer = _import_("0-add_integer").add_integer
+
+
+Checking for module docstring:
+	>>> m = __import__("0-add_integer").__doc__
+	>>> len(m) > 1 
+	True
+Testing with a only
 >>> add_integer(2)
 100
->>> add_integer(1.2, 5.8)
+
+Testing over regular addtion
+>>> add_integer(4,2)
 6
 
-# Invalid arguments
->>> try:
-...     add_integer('3', 3)
-... except TypeError as ex:
-...     print(ex.args[0])
-a must be an integer
->>> try:
-...     add_integer(('3'), 3)
-... except TypeError as ex:
-...     print(ex.args[0])
-a must be an integer
->>> try:
-...     add_integer(3, None)
-... except TypeError as ex:
-...     print(ex.args[0])
-b must be an integer
->>> try:
-...     add_integer(3, '4')
-... except TypeError as ex:
-...     print(ex.args[0])
-b must be an integer
->>> try:
-...     add_integer(float('inf'), float('inf'))
-... except Exception as ex:
-...     print(ex.args[0])
-cannot convert float infinity to integer
->>> try:
-...     add_integer(float('inf'), 4)
-... except Exception as ex:
-...     print(ex.args[0])
-cannot convert float infinity to integer
->>> try:
-...     add_integer(float('NaN'), 5)
-... except Exception as ex:
-...     print(ex.args[0])
-cannot convert float NaN to integer
+Testing over negative addtion
+>>> add_integer(-9, 11)
+2
 
-'''
+Testing over zero addtion
+>>> add_integer(0,0)
+0
+
+Testing with a = float
+>>> add_integer(54.3, 6)
+60
+
+Testing with b = float
+>>> add_integer(70, 20.8)
+90
+
+Testing over both floats
+>>> add_integer(3.5, 7.7)
+10
+
+Testing with a not in (int, float)
+>>> add_integer("4", 5)
+a must be an integer
+
+Testing with a not in (int, float)
+>>> add_integer(5, None)
+b must an integer
