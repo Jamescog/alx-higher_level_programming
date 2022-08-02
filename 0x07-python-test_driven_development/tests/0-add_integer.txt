@@ -5,13 +5,14 @@ The ``0-add_integer`` module
 Using ``add_integer``
 --------------------------------------
 Importing the function from module
->>> add_integer = _import_("0-add_integer").add_integer
+>>> add_integer = __import__("0-add_integer").add_integer
 
 
 Checking for module docstring:
-	>>> m = __import__("0-add_integer").__doc__
-	>>> len(m) > 1 
-	True
+>>> m = __import__("0-add_integer").__doc__
+>>> len(m) > 1 
+True
+
 Testing with a only
 >>> add_integer(2)
 100
