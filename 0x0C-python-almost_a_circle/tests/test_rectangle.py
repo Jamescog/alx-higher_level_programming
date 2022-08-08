@@ -468,5 +468,6 @@ class TestRectangle_stdout(unittest.TestCase):
         sys.stdout = sys.__stdout__
         return capture
 
+
 if __name__ == "__main__":
     unittest.main()
