@@ -1,7 +1,8 @@
 -- list all records of the table second_table of database
+-- start with top score on top
 SELECT 
-	score, name
+	`score`, `name`
 FROM
-	first_table
+	`first_table`
 ORDER BY
-	score DESC;
+	`score` DESC;
