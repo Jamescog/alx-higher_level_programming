@@ -1,1 +1,2 @@
-The second repository for SQL.
+writing more queries on sql 
+second project
