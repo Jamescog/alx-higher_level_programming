@@ -5,6 +5,6 @@ const truthValue = isNaN(isInt);
 if (truthValue) {
   console.log('Not a number');
 } else {
-  const num = parseInt(isInt, 10);
+  const num = Math.floor(isInt);
   console.log(num);
 }
