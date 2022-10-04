@@ -6,5 +6,5 @@ if (truthValue) {
   console.log('Not a number');
 } else {
   const num = Math.floor(isInt);
-  console.log(num);
+  console.log('My number: ' + num);
 }
