@@ -1,8 +1,6 @@
 #!/usr/bin/node
 class Rectangle {
-  constructor () {
-    console.log('[Class: Rectangle]');
-  }
+  constructor () {}
 }
 
 module.export = Rectangle;
