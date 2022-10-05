@@ -1,5 +1,5 @@
 #!/usr/bin/node
-class Rectangle() {
+class Rectangle {
   constructor() {
     console.log('[Class: Rectangle]');
   }
