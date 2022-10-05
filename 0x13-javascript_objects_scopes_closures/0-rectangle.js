@@ -4,3 +4,5 @@ class Rectangle {
     console.log('[Class: Rectangle]');
   }
 }
+
+module.export = Rectangle;
