@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 LIST EVERY THING FROM DATABASE ON THE TABELE "states"
 """
