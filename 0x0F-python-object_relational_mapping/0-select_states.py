@@ -12,4 +12,4 @@ if __name__ == "__main__":
     cursor.execute("SELECT * FROM states;")
     result = cursor.fetchall()
     for row in result:
-        print(i)
+        print(row)
