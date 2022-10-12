@@ -5,7 +5,6 @@
 
 
 from sys import argv
-from zipapp import create_archive
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
