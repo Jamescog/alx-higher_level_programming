@@ -19,5 +19,4 @@ if __name__ == '__main__':
     cursor.execute(query)
     result = cursor.fetchall()
 
-    for row in result:
-        print(row[1], end=",")
+    print(", ".join([state[1] for state in result]))
