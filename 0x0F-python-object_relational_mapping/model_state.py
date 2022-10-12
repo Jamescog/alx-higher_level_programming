@@ -4,15 +4,16 @@
 """
 
 
-from enum import unique
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Integer, String, Column, MetaData
+from sqlalchemy import Integer, String, Column
 
-myMetadata = MetaData()
-Base = declarative_base(metadata=myMetadata)
+Base = declarative_base()
 
 
 class State(Base):
+    """
+        maps to table states
+    """
     __tablename__ = 'states'
-    id = Column(Integer, unique=True, nullable=False, primary_key=True)
+    id = Column(Integer, nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)
