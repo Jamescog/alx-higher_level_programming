@@ -1,3 +1,4 @@
+#!/usr/bin/pyhton3
 """
     this script lists all cities from database hbtn_oe_4_usa
 """
