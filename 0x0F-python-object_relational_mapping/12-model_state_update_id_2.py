@@ -22,5 +22,6 @@ if __name__ == '__main__':
     session = Session()
     temp = session.query(State).get(2)
     temp.name = 'New Mexico'
+    session.add(temp)
     session.commit()
     session.close()
