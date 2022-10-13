@@ -25,6 +25,5 @@ if __name__ == "__name__":
         if 'a' in state.name:
             a_list.append(state.id)
     for del_id in a_list:
-        state = session.query(State).get(State.id==del_id)
-        session.delete(state)
+        session.query(State).filter(State.id==del_id).delete()
     session.commit()
