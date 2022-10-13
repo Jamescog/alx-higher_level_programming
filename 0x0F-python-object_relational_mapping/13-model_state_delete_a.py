@@ -16,7 +16,6 @@ if __name__ == '__main__':
         argv[2],
         argv[3]
     ))
-    
     Session = sessionmaker(bind=engine)
     session = Session()
 
@@ -27,5 +26,6 @@ if __name__ == '__main__':
         if 'a' in state.name:
             states.append(state.id)
     for state_id in states:
-        session.query(State).filter(State.id==state_id).delete()
+        obj = session.query(State).filter(State.id == state_id).first()
+        session.delete(obj)
     session.commit()
