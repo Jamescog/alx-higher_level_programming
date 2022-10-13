@@ -16,14 +16,10 @@ if __name__ == "__name__":
         argv[2],
         argv[3]
     ))
-    Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    all = session.query(State).all()
-    a_list = []
-    for state in all:
-        if 'a' in state.name:
-            a_list.append(state.name)
-    for name in a_list:
-        session.query(State).filter(State.name==name).delete()
+    states = session.query(State).filter(State.name.like('%a%')).all()
+    
+    for state in states:
+        session.delete(state)
     session.commit()
