@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Sends a DELETE request to URL passed as first argumet
 # and displays the body of the response
-curl -sX DELETE http://$1
+curl -sX DELETE "$1"
