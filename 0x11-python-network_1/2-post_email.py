@@ -6,14 +6,15 @@ and displays the body of response (decoded in utf-8)
 """
 
 
-from sys import argv
-from urllib import request, parse
+if __name__ == "__main__":
+    from sys import argv
+    from urllib import request, parse
 
 
-value = {'email': argv[1]}
-pars = parse.urlencode(value)
-pars = pars.encode('utf-8')
-req = request.Requesst(argv[1], pars)
-with request.urlopen(req) as respo:
-    content = respo.read().decode('utf-8')
-print(content)
+    value = {'email': argv[1]}
+    pars = parse.urlencode(value)
+    pars = pars.encode('utf-8')
+    req = request.Requesst(argv[1], pars)
+    with request.urlopen(req) as respo:
+        content = respo.read().decode('utf-8')
+    print(content)
