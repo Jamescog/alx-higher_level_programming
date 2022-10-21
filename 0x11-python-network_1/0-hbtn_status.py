@@ -13,4 +13,3 @@ print("""Body response:
     - type: {}
     - content: {}
     - utf8 content: {}""".format(type(respo.peek()), respo.peek(), respo.msg))
-
