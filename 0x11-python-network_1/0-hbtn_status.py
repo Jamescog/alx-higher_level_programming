@@ -7,9 +7,8 @@ The package used: urllib
 if __name__ == "__main__":
     from urllib import request
 
-
-    respo = request.urlopen("https://alx-intranet.hbtn.io/status")
+    r = request.urlopen("https://alx-intranet.hbtn.io/status")
     print("""Body response:
         - type: {}
         - content: {}
-        - utf8 content: {}""".format(type(respo.peek()), respo.peek(), respo.msg))
+        - utf8 content: {}""".format(type(r.peek()), r.peek(), r.msg))

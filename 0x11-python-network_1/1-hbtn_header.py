@@ -10,7 +10,6 @@ if __name__ == "__main__":
     from sys import argv
     from urllib import request
 
-
     with request.urlopen(argv[1]) as respo:
         headers = dict(respo.getheaders())
     print(headers['X-Request-Id'])
