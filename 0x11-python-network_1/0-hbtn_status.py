@@ -9,10 +9,8 @@ from urllib import request
 
 
 respo = request.urlopen("https://alx-intranet.hbtn.io/status")
-print("""
-Body response:
+print("""Body response:
     - type: {}
     - content: {}
-    - utf8 content: {}
+    - utf8 content: {}""".format(type(respo.peek()), respo.peek(), respo.msg))
 
-""".format(type(respo.peek()), respo.peek(), respo.msg))
