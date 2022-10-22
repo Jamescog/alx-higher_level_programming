@@ -15,7 +15,7 @@ if __name__ == "__main__":
     else:
         letter = {'q': "''"}
 
-    r = post("http://0.0.0.0:5000", data=letter)
+    r = post("http://0.0.0.0:5000/search_user", data=letter)
     try:
         r = r.json()
         if len(r) == 0:
