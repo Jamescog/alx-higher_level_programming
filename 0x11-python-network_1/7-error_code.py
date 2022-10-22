@@ -16,5 +16,5 @@ if __name__ == "__main__":
     if (r.ok):
         print(r.text)
     else:
-        print(f"Error code: {r.status_code}")
+        print("Error code: {}".format(r.status_code))
     r.close()
