@@ -14,6 +14,7 @@ if __name__ == "__main__":
     from requests import get
     r = get(argv[1])
     if (r.ok):
-        print(r.content)
+        print(r.text)
     else:
         print(f"Error code: {r.status_code}")
+    r.close()
