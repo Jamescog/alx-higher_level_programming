@@ -13,7 +13,7 @@ if __name__ == "__main__":
     value = {'email': argv[1]}
     pars = parse.urlencode(value)
     pars = pars.encode('utf-8')
-    req = request.Requesst(argv[1], pars)
+    req = request.Request(argv[1], pars)
     with request.urlopen(req) as respo:
         content = respo.read().decode('utf-8')
     print(content)
