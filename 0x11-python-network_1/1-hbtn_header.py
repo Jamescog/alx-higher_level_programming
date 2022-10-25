@@ -12,4 +12,4 @@ if __name__ == "__main__":
 
     with request.urlopen(argv[1]) as respo:
         headers = dict(respo.getheaders())
-    print(headers['X-Request-Id'])
+    print(headers.get("X-Request-Id"))
