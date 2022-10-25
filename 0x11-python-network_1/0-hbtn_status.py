@@ -12,7 +12,7 @@ if __name__ == "__main__":
     with request.urlopen("https://alx-intranet.hbtn.io/status") as r:
         binary = r.read()
         ty = type(binary)
-        m = r.msg
+        m = binary.decode('utf-8')
         print("Body response:")
         print("    - type: {}".format(ty))
         print("    - content: {}".format(binary))
